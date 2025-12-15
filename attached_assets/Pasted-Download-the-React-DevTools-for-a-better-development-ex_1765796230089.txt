@@ -1,0 +1,39 @@
+Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+api.ts:136 Starting comparison with data: Object
+api.ts:161 Fetching articles for languages: Object
+api.ts:172 ✓ Fetched ru: Бронте, Энн (37868 chars)
+api.ts:172 ✓ Fetched ar: آن برونتي (12300 chars)
+api.ts:182 Successfully fetched 2 articles for comparison
+api.ts:190 Sending to AI service for comparison...
+api.ts:191 Article content lengths: Array(2)
+api.ts:192 Premium options being sent: Object
+api.ts:222 AI comparison result length: 8101
+api.ts:228 OpenAI comparison completed, saving to local storage...
+api.ts:253 Comparison saved successfully: 5d0bdd23-7b33-41e6-b745-859887f65b5e
+api.ts:136 Starting comparison with data: Object
+api.ts:256 Compare articles error: Error: GENERATION_LIMIT_EXCEEDED
+    at Object.compareArticles (api.ts:152:23)
+compareArticles @ api.ts:256
+comparison-loading.tsx:54 Comparison error: Error: GENERATION_LIMIT_EXCEEDED
+    at Object.compareArticles (api.ts:152:23)
+onError @ comparison-loading.tsx:54
+billing.tsx:31  POST https://f465ef0b-86b2-49e9-95b6-6a3cdc241ce1-00-1vwx90tflhcz3.janeway.replit.dev/api/billing/create-checkout 500 (Internal Server Error)
+handleSubscribe @ billing.tsx:31
+await in handleSubscribe
+callCallback2 @ chunk-WERSD76P.js?v=94226656:3674
+invokeGuardedCallbackDev @ chunk-WERSD76P.js?v=94226656:3699
+invokeGuardedCallback @ chunk-WERSD76P.js?v=94226656:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-WERSD76P.js?v=94226656:3736
+executeDispatch @ chunk-WERSD76P.js?v=94226656:7014
+processDispatchQueueItemsInOrder @ chunk-WERSD76P.js?v=94226656:7034
+processDispatchQueue @ chunk-WERSD76P.js?v=94226656:7043
+dispatchEventsForPlugins @ chunk-WERSD76P.js?v=94226656:7051
+(anonymous) @ chunk-WERSD76P.js?v=94226656:7174
+batchedUpdates$1 @ chunk-WERSD76P.js?v=94226656:18913
+batchedUpdates @ chunk-WERSD76P.js?v=94226656:3579
+dispatchEventForPluginEventSystem @ chunk-WERSD76P.js?v=94226656:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-WERSD76P.js?v=94226656:5478
+dispatchEvent @ chunk-WERSD76P.js?v=94226656:5472
+dispatchDiscreteEvent @ chunk-WERSD76P.js?v=94226656:5449
+billing.tsx:53 Checkout error: Error: Failed to create checkout session
+    at handleSubscribe (billing.tsx:44:15)
