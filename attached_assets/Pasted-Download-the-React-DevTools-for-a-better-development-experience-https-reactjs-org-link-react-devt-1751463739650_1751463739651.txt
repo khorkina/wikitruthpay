@@ -1,0 +1,43 @@
+Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+@radix-ui_react-dialog.js?v=d8a14203:339 Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+(anonymous) @ @radix-ui_react-dialog.js?v=d8a14203:339
+language-selection.tsx:65 Starting free comparison process...
+api.ts:119 Starting comparison with data: Object
+select-languages:1 Access to fetch at 'https://ru.wikipedia.org/w/api.php?action=opensearch&search=%D0%95%D0%BB%D0%B8%D0%B7%D0%B0%D0%B2%D0%B5&limit=10&namespace=0&format=json&origin=*' from origin 'https://78b6b1a7-9b15-456e-a415-09ec496ce4d9-00-2repqokkdf6pe.kirk.replit.dev' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+ru.wikipedia.org/w/api.php?action=opensearch&search=%D0%95%D0%BB%D0%B8%D0%B7%D0%B0%D0%B2%D0%B5&limit=10&namespace=0&format=json&origin=*:1 
+            
+            
+           Failed to load resource: net::ERR_FAILED
+wikipedia-client.ts:63 Wikipedia search error: TypeError: Failed to fetch
+    at WikipediaClient.searchArticles (wikipedia-client.ts:43:30)
+    at Object.searchArticles (api.ts:56:45)
+    at queryFn (use-wikipedia-search.ts:21:24)
+    at Object.fetchFn [as fn] (@tanstack_react-query.js?v=d8a14203:840:14)
+    at run (@tanstack_react-query.js?v=d8a14203:494:49)
+    at Object.start (@tanstack_react-query.js?v=d8a14203:536:9)
+    at _a4.fetch (@tanstack_react-query.js?v=d8a14203:926:41)
+    at _a9.executeFetch_fn (@tanstack_react-query.js?v=d8a14203:2211:51)
+    at _a9.setOptions (@tanstack_react-query.js?v=d8a14203:1955:72)
+    at @tanstack_react-query.js?v=d8a14203:3032:14
+searchArticles @ wikipedia-client.ts:63
+select-languages:1 Access to fetch at 'https://en.wikipedia.org/w/api.php?action=query&titles=Berlin&prop=extracts&explaintext=true&format=json&origin=*' from origin 'https://78b6b1a7-9b15-456e-a415-09ec496ce4d9-00-2repqokkdf6pe.kirk.replit.dev' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+en.wikipedia.org/w/api.php?action=query&titles=Berlin&prop=extracts&explaintext=true&format=json&origin=*:1 
+            
+            
+           Failed to load resource: net::ERR_FAILED
+wikipedia-simple.ts:10 Wikipedia connection test failed: TypeError: Failed to fetch
+    at SimpleWikipediaClient.testConnection (wikipedia-simple.ts:5:30)
+    at Object.compareArticles (api.ts:122:50)
+    at Object.mutationFn (language-selection.tsx:86:18)
+    at Object.fn (@tanstack_react-query.js?v=d8a14203:1189:29)
+    at run (@tanstack_react-query.js?v=d8a14203:494:49)
+    at Object.start (@tanstack_react-query.js?v=d8a14203:536:9)
+    at _a6.execute (@tanstack_react-query.js?v=d8a14203:1225:56)
+testConnection @ wikipedia-simple.ts:10
+api.ts:205 Compare articles error: Error: Cannot connect to Wikipedia API
+    at Object.compareArticles (api.ts:124:15)
+compareArticles @ api.ts:205
+language-selection.tsx:101 Comparison error: Error: Wikipedia data error: Cannot connect to Wikipedia API. Please try a different article.
+    at Object.compareArticles (api.ts:212:17)
+onError @ language-selection.tsx:101
+execute @ @tanstack_react-query.js?v=d8a14203:1254

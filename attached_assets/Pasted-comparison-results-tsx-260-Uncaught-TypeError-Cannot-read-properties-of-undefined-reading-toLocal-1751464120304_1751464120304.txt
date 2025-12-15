@@ -1,0 +1,28 @@
+comparison-results.tsx:260 Uncaught TypeError: Cannot read properties of undefined (reading 'toLocaleString')
+    at comparison-results.tsx:260:74
+    at Array.map (<anonymous>)
+    at ComparisonResults (comparison-results.tsx:259:53)
+comparison-results.tsx:260 Uncaught TypeError: Cannot read properties of undefined (reading 'toLocaleString')
+    at comparison-results.tsx:260:74
+    at Array.map (<anonymous>)
+    at ComparisonResults (comparison-results.tsx:259:53)
+chunk-RPCDYKBN.js?v=d8a14203:14032 The above error occurred in the <ComparisonResults> component:
+
+    at ComparisonResults (https://78b6b1a7-9b15-456e-a415-09ec496ce4d9-00-2repqokkdf6pe.kirk.replit.dev/src/pages/comparison-results.tsx:93:27)
+    at Route (https://78b6b1a7-9b15-456e-a415-09ec496ce4d9-00-2repqokkdf6pe.kirk.replit.d…/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=d8a14203:323:16)
+    at Switch (https://78b6b1a7-9b15-456e-a415-09ec496ce4d9-00-2repqokkdf6pe.kirk.replit.d…/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=d8a14203:379:17)
+    at Router
+    at div
+    at div
+    at div
+    at Provider (https://78b6b1a7-9b15-456e-a415-09ec496ce4d9-00-2repqokkdf6pe.kirk.replit.d…unner/workspace/node_modules/.vite/deps/chunk-TONAP5II.js?v=d8a14203:43:15)
+    at TooltipProvider (https://78b6b1a7-9b15-456e-a415-09ec496ce4d9-00-2repqokkdf6pe.kirk.replit.d…rkspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=d8a14203:61:5)
+    at QueryClientProvider (https://78b6b1a7-9b15-456e-a415-09ec496ce4d9-00-2repqokkdf6pe.kirk.replit.d…rkspace/node_modules/.vite/deps/@tanstack_react-query.js?v=d8a14203:2805:3)
+    at App (https://78b6b1a7-9b15-456e-a415-09ec496ce4d9-00-2repqokkdf6pe.kirk.replit.dev/src/App.tsx?v=s2sJTIUZNlGsGRynVY8OY:123:3)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+chunk-RPCDYKBN.js?v=d8a14203:9129 Uncaught TypeError: Cannot read properties of undefined (reading 'toLocaleString')
+    at comparison-results.tsx:260:74
+    at Array.map (<anonymous>)
+    at ComparisonResults (comparison-results.tsx:259:53)

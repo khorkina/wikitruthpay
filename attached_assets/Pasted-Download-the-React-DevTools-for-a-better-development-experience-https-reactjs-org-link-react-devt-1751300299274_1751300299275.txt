@@ -1,0 +1,37 @@
+Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+language-selection.tsx:39 Language titles mapping: Object
+language-selection.tsx:40 Selected languages: Array(3)
+language-selection.tsx:41 Available language links: Array(232)
+api.ts:117 Starting comparison with data: Object
+wikipedia-simple.ts:7 Wikipedia test response: Object
+api.ts:127 Fetching articles for languages: Object
+wikipedia-simple.ts:19 Fetching: https://ru.wikipedia.org/w/api.php?action=query&titles=%D0%A1%D0%B0%D0%BB%D1%8C%D0%B2%D0%B0%D0%B4%D0%BE%D1%80&prop=extracts&explaintext=true&format=json&origin=*
+api.ts:133 ✓ Fetched ru: Сальвадор (16919 chars)
+wikipedia-simple.ts:19 Fetching: https://zh-min-nan.wikipedia.org/w/api.php?action=query&titles=El%20Salvador&prop=extracts&explaintext=true&format=json&origin=*
+api.ts:133 ✓ Fetched zh-min-nan: El Salvador (117 chars)
+wikipedia-simple.ts:19 Fetching: https://zgh.wikipedia.org/w/api.php?action=query&titles=%E2%B5%99%E2%B4%B0%E2%B5%8D%E2%B4%BC%E2%B4%B0%E2%B4%B7%E2%B5%93%E2%B5%94&prop=extracts&explaintext=true&format=json&origin=*
+api.ts:133 ✓ Fetched zgh: ⵙⴰⵍⴼⴰⴷⵓⵔ (44 chars)
+api.ts:143 Successfully fetched 3 articles for comparison
+api.ts:151 Sending to OpenAI for comparison...
+api.ts:152 Article content lengths: Array(3)
+openai-client.ts:38 Starting OpenAI comparison...
+openai-client.ts:13 Retrieving OpenAI API key...
+openai-client.ts:18 User API key from storage: Found
+openai-client.ts:45 API key retrieved, preparing comparison...
+openai-client.ts:58 Making OpenAI API request...
+openai-client.ts:59 Articles being compared: Array(3)
+select-languages:1 Access to fetch at 'https://api.openai.com/v1/chat/completions' from origin 'https://78b6b1a7-9b15-456e-a415-09ec496ce4d9-00-2repqokkdf6pe.kirk.replit.dev' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+api.openai.com/v1/chat/completions:1 
+            
+            
+           Failed to load resource: net::ERR_FAILED
+openai-client.ts:101 OpenAI comparison error: TypeError: Failed to fetch
+    at OpenAIClient.compareArticles (openai-client.ts:71:30)
+    at async Object.compareArticles (api.ts:157:28)
+compareArticles @ openai-client.ts:101
+api.ts:164 OpenAI comparison failed: TypeError: Failed to fetch
+    at OpenAIClient.compareArticles (openai-client.ts:71:30)
+    at async Object.compareArticles (api.ts:157:28)
+compareArticles @ api.ts:164
+api.ts:184 Compare articles error: Error: AI comparison failed: Failed to fetch
+    at Object.compareArticles (api.ts:165:15)

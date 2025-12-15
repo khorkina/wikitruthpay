@@ -1,0 +1,83 @@
+Create a web application in Java called "Wiki Truth". The purpose of this app is to allow users to compare the content of a single Wikipedia article across multiple language versions using OpenAI's GPT-4.0 API and highlight factual and narrative differences.
+
+Main Functionalities:
+
+Homepage:
+
+The user selects an input language from all available Wikipedia languages.
+
+The user enters a search query.
+
+As the user types, real-time suggestions of Wikipedia article titles in that language should appear (via the Wikipedia Search API).
+
+The user selects one of the article titles.
+
+The homepage must include a detailed description of the app’s purpose and functionality:
+
+"Wiki Truth uses artificial intelligence to compare Wikipedia articles across multiple languages. It reveals how the same topic can be presented differently in various linguistic and cultural contexts."
+
+Language Selection Page (after selecting the article):
+
+The app fetches all available language versions of the selected article (using Wikipedia LangLinks API).
+
+The user selects from 2 to 5 language versions for comparison.
+
+The user also selects an output language, in which the comparison will be generated.
+
+Comparison Logic:
+
+When the user clicks "Compare Articles":
+
+The app retrieves the full content of the selected article versions (using the Wikipedia API).
+
+The articles are combined into a structured JSON object, formatted like:
+
+json
+Копировать
+Редактировать
+{
+  "en": "Full English article text...",
+  "ru": "Полный текст статьи на русском...",
+  "fr": "Texte complet de l'article français...",
+  ...
+}
+This JSON is then sent to OpenAI's GPT-4.0 API with instructions to compare the articles.
+
+The model must:
+
+Identify and explain all differences in factual content, framing, and tone.
+
+Clearly state which information appears in which language version.
+
+Return the comparison in the selected output language.
+
+The output must be long, structured, and accurate.
+
+Funny Mode:
+
+A special button labeled “Funny Mode” allows the user to request a humorous roast-style comparison.
+
+The app sends the same JSON content to GPT-4.0 with instructions to generate a sarcastic and witty commentary on the differences.
+
+Emphasize absurd or unexpected ways different language editions present the same topic.
+
+Export and Share:
+
+After generating the comparison, the user can:
+
+Export the result as a .docx (Microsoft Word) document.
+
+Click on share buttons (X, LinkedIn, Telegram, WhatsApp, Reddit):
+
+These buttons copy the full comparison text and a permalink to this session to the clipboard for easy sharing.
+
+Design Requirements:
+
+The application must perfectly mimic the visual design of Wikipedia:
+
+Use the same fonts, spacing, colors, and layout.
+
+All UI components must visually match Wikipedia, including mobile responsiveness.
+
+The design goal is for the app to look like it is part of Wikipedia.
+

@@ -1,0 +1,80 @@
+I am building a bilingual React + Express.js web app based on the following structure (see below). Please design a fully responsive UI in two variants — one adapted specifically for mobile devices (smartphones) and one for PC (desktop/laptop).
+
+The visual design must follow the clean and familiar style of Wikipedia — that means:
+
+flat minimalism
+
+white/light backgrounds
+
+clear blue link highlights
+
+generous spacing between sections
+
+minimal use of icons (only where needed)
+
+intuitive grouping of elements
+
+But at the same time, make the design feel modern and native — like a polished single-page app that users instantly understand. Apply "Don't make me think" UX principles.
+
+MOBILE version must:
+
+Use collapsible menus (hamburger)
+
+Prioritize vertical scrolling
+
+Use bottom or floating action buttons for navigation (where applicable)
+
+Ensure fast loading and easy touch interactions
+
+Typography should be highly readable on small screens
+
+DESKTOP version must:
+
+Use a fixed sidebar for navigation (instead of hamburger)
+
+Keep key pages (search, results, history) accessible with one click
+
+Place advanced settings logically on the right or in modal overlays
+
+Use a fluid grid layout for readability at various resolutions
+
+For both versions:
+
+The user must never feel lost — always show current location within the app
+
+Highlight free vs premium features subtly but clearly
+
+Show article comparison flow: from search → select languages → generate → result → history
+
+Style buttons and forms using Wikipedia-inspired defaults but slightly more modern (rounded edges, hover states)
+
+Ensure IndexedDB-based features (export, erase, history) are easily discoverable and explainable
+
+The checkout process must feel simple, secure, and native (via Smart Glocal)
+
+Display a "Crown" badge for Premium users in a subtle but elegant way
+
+Refer to the following structure and page flow (Mermaid diagram was used):
+
+Main Page: Search & language selector
+
+Lang Pick: choose 2–5 languages for comparison
+
+Advanced Settings: unlockable with Premium
+
+Generate Comparison: show loading, handle quotas
+
+Result Page: detailed comparison with share button
+
+History: past comparisons, local storage only
+
+Informational Pages: About, Help, Privacy
+
+Settings: Export/Erase data options
+
+External APIs: Wikipedia REST, OpenRouter (Free), OpenAI (Premium), Smart Glocal (Payments).
+
+Use design systems like Tailwind and/or shadcn/ui. Make sure everything is fully accessible and internationalizable (i18next, 20+ UI languages).
+
+Now, generate two Figma-style layout descriptions or mockup guidelines — one for mobile, one for PC — following all the above.
+
