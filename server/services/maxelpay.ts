@@ -79,13 +79,16 @@ export async function createCheckoutSession(params: {
 
   const data = await response.json();
   
-  if (!data.success || !data.data?.checkout_url) {
+  // Handle different response formats from MaxelPay
+  const checkoutUrl = data.result || data.data?.checkout_url;
+  
+  if (!checkoutUrl) {
     console.error('MaxelPay response error:', data);
     throw new Error(data.message || 'Failed to create checkout session');
   }
 
   return {
-    checkoutUrl: data.data.checkout_url,
+    checkoutUrl: checkoutUrl,
     orderId: orderId
   };
 }
