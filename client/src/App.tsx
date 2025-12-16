@@ -27,6 +27,7 @@ import ComparisonLoading from "@/pages/comparison-loading";
 import BillingPage from "@/pages/billing";
 import BillingSuccessPage from "@/pages/billing-success";
 import BillingCancelPage from "@/pages/billing-cancel";
+import LibraryPage from "@/pages/library";
 import NotFound from "@/pages/not-found";
 
 function ScrollToTop() {
@@ -64,6 +65,7 @@ function Router() {
         <Route path="/billing" component={BillingPage} />
         <Route path="/billing/success" component={BillingSuccessPage} />
         <Route path="/billing/cancel" component={BillingCancelPage} />
+        <Route path="/library" component={LibraryPage} />
         <Route component={NotFound} />
       </Switch>
     </>

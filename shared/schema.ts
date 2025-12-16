@@ -34,6 +34,7 @@ export const comparisons = pgTable("comparisons", {
   comparisonResult: text("comparison_result"),
   isFunnyMode: boolean("is_funny_mode").default(false),
   isPremium: boolean("is_premium").default(false),
+  isPublic: boolean("is_public").default(true), // All comparisons are public by default for library
   createdAt: timestamp("created_at").defaultNow(),
 });
 

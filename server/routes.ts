@@ -484,6 +484,30 @@ The user is now asking about this analysis. Please provide helpful, conversation
     }
   });
 
+  // Library - get public comparisons
+  app.get("/api/library", async (req, res) => {
+    try {
+      const { language, limit = '20', offset = '0' } = req.query;
+      
+      const comparisons = await storage.getPublicComparisons(
+        language as string | undefined,
+        Number(limit),
+        Number(offset)
+      );
+      
+      const total = await storage.getPublicComparisonsCount(language as string | undefined);
+      
+      res.json({
+        comparisons,
+        total,
+        hasMore: Number(offset) + comparisons.length < total
+      });
+    } catch (error) {
+      console.error('Library fetch error:', error);
+      res.status(500).json({ error: "Failed to fetch library comparisons" });
+    }
+  });
+
   // Get comparison by ID
   app.get("/api/compare/:id", async (req, res) => {
     try {

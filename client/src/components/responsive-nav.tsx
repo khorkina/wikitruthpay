@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
-import { Menu, X, Search, History, HelpCircle, Info, Settings } from 'lucide-react';
+import { Menu, X, Search, History, HelpCircle, Info, Settings, Library } from 'lucide-react';
 import { SettingsDialog } from './settings-dialog';
 import { ThemeToggle } from './theme-toggle';
 
@@ -14,6 +14,7 @@ interface NavItem {
 const NAV_ITEMS: NavItem[] = [
   { href: '/', label: 'Main page', icon: <Search className="w-4 h-4" />, section: 'Primary' },
   { href: '/search', label: 'Search articles', icon: <Search className="w-4 h-4" />, section: 'Primary' },
+  { href: '/library', label: 'Library', icon: <Library className="w-4 h-4" />, section: 'Primary' },
   { href: '/recent', label: 'Recent comparisons', icon: <History className="w-4 h-4" />, section: 'Tools' },
   { href: '/about', label: 'About', icon: <Info className="w-4 h-4" />, section: 'Help' },
   { href: '/how-it-works', label: 'How it works', icon: <Info className="w-4 h-4" />, section: 'Help' },
@@ -148,6 +149,16 @@ export function ResponsiveNav() {
                 <span>Search</span>
               </Link>
               <Link 
+                href="/library" 
+                className="flex flex-col items-center gap-1 py-2 px-3 text-xs"
+                onClick={() => {
+                  setTimeout(() => window.scrollTo({ top: 0, behavior: 'instant' }), 50);
+                }}
+              >
+                <Library className="w-4 h-4" />
+                <span>Library</span>
+              </Link>
+              <Link 
                 href="/recent" 
                 className="flex flex-col items-center gap-1 py-2 px-3 text-xs"
                 onClick={() => {
@@ -167,7 +178,6 @@ export function ResponsiveNav() {
                 <Info className="w-4 h-4" />
                 <span>About</span>
               </Link>
-
             </div>
           </div>
         </>
@@ -190,6 +200,7 @@ export function ResponsiveNav() {
               <div className="flex items-center gap-6">
                 <nav className="flex items-center gap-6">
                   <Link href="/search" className="wiki-link text-sm">Search</Link>
+                  <Link href="/library" className="wiki-link text-sm">Library</Link>
                   <Link href="/recent" className="wiki-link text-sm">History</Link>
                   <Link href="/help" className="wiki-link text-sm">Help</Link>
                   <Link href="/about" className="wiki-link text-sm">About</Link>

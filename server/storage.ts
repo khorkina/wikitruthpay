@@ -32,6 +32,8 @@ export interface IStorage {
   // Comparison operations
   createComparison(comparison: InsertComparison): Promise<Comparison>;
   getComparison(id: number): Promise<Comparison | undefined>;
+  getPublicComparisons(outputLanguage?: string, limit?: number, offset?: number): Promise<Comparison[]>;
+  getPublicComparisonsCount(outputLanguage?: string): Promise<number>;
   
   // Search session operations
   createSearchSession(session: InsertSearchSession): Promise<SearchSession>;
@@ -157,6 +159,7 @@ export class MemStorage implements IStorage {
       comparisonResult: insertComparison.comparisonResult || null,
       isFunnyMode: insertComparison.isFunnyMode || null,
       isPremium: insertComparison.isPremium || null,
+      isPublic: insertComparison.isPublic ?? true,
       createdAt: new Date()
     };
     this.comparisons.set(id, comparison);
@@ -165,6 +168,22 @@ export class MemStorage implements IStorage {
 
   async getComparison(id: number): Promise<Comparison | undefined> {
     return this.comparisons.get(id);
+  }
+
+  async getPublicComparisons(outputLanguage?: string, limit: number = 20, offset: number = 0): Promise<Comparison[]> {
+    const allComparisons = Array.from(this.comparisons.values())
+      .filter(c => c.isPublic && c.comparisonResult)
+      .filter(c => !outputLanguage || c.outputLanguage === outputLanguage)
+      .sort((a, b) => (b.createdAt?.getTime() || 0) - (a.createdAt?.getTime() || 0));
+    
+    return allComparisons.slice(offset, offset + limit);
+  }
+
+  async getPublicComparisonsCount(outputLanguage?: string): Promise<number> {
+    return Array.from(this.comparisons.values())
+      .filter(c => c.isPublic && c.comparisonResult)
+      .filter(c => !outputLanguage || c.outputLanguage === outputLanguage)
+      .length;
   }
 
   async createSearchSession(insertSession: InsertSearchSession): Promise<SearchSession> {
