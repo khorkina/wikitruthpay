@@ -90,10 +90,16 @@ export default function LibraryPage() {
     return new Date(dateStr).toLocaleDateString();
   };
 
-  const getPreviewText = (text: string | null) => {
+  const getPreviewText = (text: string | null, maxLength: number = 200) => {
     if (!text) return 'No content available';
-    const stripped = text.replace(/[#*_`]/g, '').trim();
-    return stripped.length > 200 ? stripped.substring(0, 200) + '...' : stripped;
+    const stripped = text.replace(/[#*_`\[\]]/g, '').replace(/\n+/g, ' ').trim();
+    return stripped.length > maxLength ? stripped.substring(0, maxLength) + '...' : stripped;
+  };
+
+  const getExpandedText = (text: string | null, maxLength: number = 2000) => {
+    if (!text) return 'No content available';
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength) + '\n\n... [Click "View Full Analysis" to see the complete comparison]';
   };
 
   return (
@@ -193,11 +199,11 @@ export default function LibraryPage() {
                   </CardHeader>
                   <CardContent>
                     {expandedCard === currentComparison.id ? (
-                      <div className="prose prose-sm dark:prose-invert max-w-none">
+                      <div className="prose prose-sm dark:prose-invert max-w-none max-h-96 overflow-y-auto">
                         <div className="whitespace-pre-wrap text-sm" data-testid="text-full-content">
-                          {currentComparison.comparisonResult || 'No content available'}
+                          {getExpandedText(currentComparison.comparisonResult)}
                         </div>
-                        <div className="mt-4 pt-4 border-t flex gap-2">
+                        <div className="mt-4 pt-4 border-t flex gap-2 sticky bottom-0 bg-card pb-2">
                           <Button
                             size="sm"
                             onClick={(e) => {

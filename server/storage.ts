@@ -174,7 +174,11 @@ export class MemStorage implements IStorage {
     const allComparisons = Array.from(this.comparisons.values())
       .filter(c => c.isPublic && c.comparisonResult)
       .filter(c => !outputLanguage || c.outputLanguage === outputLanguage)
-      .sort((a, b) => (b.createdAt?.getTime() || 0) - (a.createdAt?.getTime() || 0));
+      .sort((a, b) => {
+        const dateA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+        const dateB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+        return dateB - dateA;
+      });
     
     return allComparisons.slice(offset, offset + limit);
   }
