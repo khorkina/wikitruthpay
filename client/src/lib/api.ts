@@ -277,11 +277,31 @@ export const api = {
 
   async getComparison(id: string): Promise<ComparisonResult> {
     try {
-      const comparison = await clientStorage.getComparison(id);
-      if (!comparison) {
+      // First try to get from local storage (UUID-based IDs)
+      const localComparison = await clientStorage.getComparison(id);
+      if (localComparison) {
+        return localComparison;
+      }
+      
+      // If not found locally, try to fetch from server (numeric database IDs)
+      const response = await fetch(`/api/compare/${id}`);
+      if (!response.ok) {
         throw new Error('Comparison not found');
       }
-      return comparison;
+      const serverComparison = await response.json();
+      
+      // Map server response to ComparisonResult format
+      return {
+        id: String(serverComparison.id),
+        articleTitle: serverComparison.articleTitle,
+        selectedLanguages: serverComparison.selectedLanguages || [],
+        outputLanguage: serverComparison.outputLanguage || 'en',
+        comparisonResult: serverComparison.comparisonResult || '',
+        isFunnyMode: serverComparison.isFunnyMode || false,
+        isPremium: serverComparison.isPremium || false,
+        createdAt: serverComparison.createdAt || new Date().toISOString(),
+        articles: serverComparison.articles || []
+      };
     } catch (error) {
       console.error('Get comparison error:', error);
       throw error;
