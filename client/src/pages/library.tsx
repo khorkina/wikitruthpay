@@ -208,7 +208,7 @@ export default function LibraryPage() {
                             size="sm"
                             onClick={(e) => {
                               e.stopPropagation();
-                              setLocation(`/results/${currentComparison.id}`);
+                              setLocation(`/results/${currentComparison.id}?source=library`);
                             }}
                             data-testid="button-view-full"
                           >

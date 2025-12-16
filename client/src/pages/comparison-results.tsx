@@ -134,6 +134,9 @@ export default function ComparisonResults() {
   const { toast } = useToast();
   
   const comparisonId = params?.id || null;
+  
+  // Check if viewing from library (chat should be disabled)
+  const isFromLibrary = new URLSearchParams(window.location.search).get('source') === 'library';
 
   // Check premium status
   useEffect(() => {
@@ -474,8 +477,8 @@ export default function ComparisonResults() {
         </div>
       </div>
 
-      {/* Premium Chat Feature */}
-      {isPremiumUser && (
+      {/* Premium Chat Feature - only for users viewing their own comparisons, not library */}
+      {isPremiumUser && !isFromLibrary && (
         <ComparisonChat
           comparisonResult={comparison.comparisonResult}
           articleTitle={comparison.articleTitle}
