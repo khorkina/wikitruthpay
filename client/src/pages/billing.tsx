@@ -74,9 +74,6 @@ export default function BillingPage() {
         <h1 className="text-3xl font-bold mb-2" data-testid="text-billing-title">
           Upgrade to Premium
         </h1>
-        <p className="text-muted-foreground">
-          Unlock unlimited AI-powered Wikipedia comparisons
-        </p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
@@ -95,7 +92,26 @@ export default function BillingPage() {
               <span className="text-4xl font-bold">$5</span>
               <span className="text-muted-foreground">/month</span>
             </div>
-            
+
+            <Button 
+              className="w-full mb-4" 
+              onClick={handleSubscribe}
+              disabled={isLoading}
+              data-testid="button-subscribe"
+            >
+              {isLoading ? (
+                <>
+                  <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                  Processing...
+                </>
+              ) : (
+                <>
+                  <Crown className="h-4 w-4 mr-2" />
+                  Subscribe Now
+                </>
+              )}
+            </Button>
+
             <ul className="space-y-3 mb-6">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-center gap-2">
@@ -117,25 +133,6 @@ export default function BillingPage() {
                   data-testid="input-email"
                 />
               </div>
-
-              <Button 
-                className="w-full" 
-                onClick={handleSubscribe}
-                disabled={isLoading}
-                data-testid="button-subscribe"
-              >
-                {isLoading ? (
-                  <>
-                    <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                    Processing...
-                  </>
-                ) : (
-                  <>
-                    <Crown className="h-4 w-4 mr-2" />
-                    Subscribe Now
-                  </>
-                )}
-              </Button>
 
               <p className="text-xs text-muted-foreground text-center">
                 Secure payment via MaxelPay (Crypto)
