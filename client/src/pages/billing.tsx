@@ -112,16 +112,7 @@ export default function BillingPage() {
               )}
             </Button>
 
-            <ul className="space-y-3 mb-6">
-              {features.map((feature, index) => (
-                <li key={index} className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-green-500 flex-shrink-0" />
-                  <span className="text-sm">{feature}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="space-y-4">
+            <div className="space-y-4 mb-6">
               <div>
                 <Label htmlFor="email">Email address</Label>
                 <Input
@@ -138,6 +129,15 @@ export default function BillingPage() {
                 Secure payment via MaxelPay (Crypto)
               </p>
             </div>
+
+            <ul className="space-y-3 mb-6">
+              {features.map((feature, index) => (
+                <li key={index} className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-green-500 flex-shrink-0" />
+                  <span className="text-sm">{feature}</span>
+                </li>
+              ))}
+            </ul>
           </CardContent>
         </Card>
 
