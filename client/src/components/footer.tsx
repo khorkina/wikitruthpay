@@ -33,7 +33,7 @@ export function Footer() {
             <h4 className="font-semibold mb-3 text-foreground">Technology</h4>
             <ul className="space-y-2 text-sm">
               <li><a href="https://www.mediawiki.org/wiki/API:Main_page" className="text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">Wikipedia API</a></li>
-              <li><a href="https://openai.com/" className="text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">OpenAI GPT-4</a></li>
+              <li><a href="https://openai.com/" className="text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">OpenAI</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Open source</a></li>
             </ul>
           </div>

@@ -18,3 +18,8 @@
 [x] 18. Reinstalled cross-env package and verified application is running correctly
 [x] 19. Reinstalled cross-env package after environment migration and verified app is running
 [x] 20. Completed migration from Replit Agent to Replit environment
+[x] 21. Fixed language selection page - white text on white background issue (changed tag colors to blue-600 dark:blue-700)
+[x] 22. Reduced premium banner text - "Unlimited AI-powered article comparisons" → "Compare up to 5 languages"
+[x] 23. Replaced all red banners with dark orange (donation banner, error messages)
+[x] 24. Removed all GPT-4 mentions from homepage, help page, and footer
+[x] 25. Added clickable bouncing planet animation on comparison loading page

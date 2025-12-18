@@ -255,10 +255,22 @@ export default function ComparisonLoading() {
                 </Card>
               )}
 
-              <Card className="shadow-lg border bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 h-fit overflow-hidden">
+              <Card className="shadow-lg border bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 h-fit overflow-visible">
                 <CardContent className="p-4 sm:p-5 lg:p-6 xl:p-8 2xl:p-10">
                   <div className="text-center">
-                    <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl mb-2 sm:mb-3 lg:mb-4 xl:mb-6 2xl:mb-8">💡</div>
+                    <div 
+                      onClick={(e) => {
+                        const elem = e.currentTarget;
+                        elem.style.animation = 'none';
+                        setTimeout(() => {
+                          elem.style.animation = 'bounce-planet 0.6s ease-out';
+                        }, 10);
+                      }}
+                      className="inline-block text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl mb-2 sm:mb-3 lg:mb-4 xl:mb-6 2xl:mb-8 cursor-pointer transition-transform duration-200 active:scale-90"
+                      data-testid="button-planet-animate"
+                    >
+                      🌍
+                    </div>
                     <h3 className="font-bold text-base sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl mb-2 sm:mb-3 lg:mb-4 xl:mb-6 2xl:mb-8 text-gray-900 dark:text-white">
                       Did You Know?
                     </h3>
@@ -266,6 +278,9 @@ export default function ComparisonLoading() {
                       Wikipedia articles can vary significantly between languages, 
                       reflecting different cultural perspectives, regional knowledge, 
                       and editorial priorities.
+                    </p>
+                    <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-4">
+                      Click the planet above for fun!
                     </p>
                   </div>
                 </CardContent>

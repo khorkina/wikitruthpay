@@ -194,7 +194,7 @@
   }
   
   .wiki-message-error {
-    @apply bg-red-50 dark:bg-red-900/30 border-red-200 dark:border-red-800 text-red-800 dark:text-red-200;
+    @apply bg-orange-50 dark:bg-orange-900/30 border-orange-200 dark:border-orange-800 text-orange-800 dark:text-orange-200;
   }
   
   .wiki-message-success {
@@ -318,6 +318,12 @@
 @keyframes rainbow {
   0% { filter: hue-rotate(0deg); }
   100% { filter: hue-rotate(15deg); }
+}
+
+@keyframes bounce-planet {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
 }
 
 /* Custom scrollbar */

@@ -44,7 +44,7 @@ export default function HelpPage() {
                 <div className="mt-3 text-sm text-gray-700 dark:text-gray-300">
                   <strong>Free:</strong> Unlimited comparisons with Meta Llama AI analysis. No subscription required, all data stored locally in your browser.
                   <br/><br/>
-                  <strong>Premium ($10/month):</strong> Advanced OpenAI GPT-4o analysis with enhanced features, customization options, and post-comparison chat functionality.
+                  <strong>Premium ($10/month):</strong> Advanced AI analysis with enhanced features, customization options, and post-comparison chat functionality.
                 </div>
               </details>
 

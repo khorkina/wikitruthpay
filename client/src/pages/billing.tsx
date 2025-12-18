@@ -62,11 +62,10 @@ export default function BillingPage() {
   };
 
   const features = [
-    "Unlimited AI-powered article comparisons",
-    "Compare up to 5 languages at once",
+    "Compare up to 5 languages",
     "Premium analysis modes",
     "Priority processing",
-    "No ads or interruptions"
+    "No ads"
   ];
 
   return (

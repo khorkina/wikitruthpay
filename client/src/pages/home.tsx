@@ -44,7 +44,7 @@ export default function Home() {
             </div>
             <h3 className="font-bold text-lg mb-2">AI-Powered Insights</h3>
             <p className="text-sm text-wiki-gray">
-              Uses GPT-4 to identify factual differences, narrative variations, and cultural biases in content presentation.
+              Advanced AI analysis to identify factual differences, narrative variations, and cultural biases in content presentation.
             </p>
           </div>
           

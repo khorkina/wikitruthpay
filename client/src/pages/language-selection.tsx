@@ -441,7 +441,7 @@ export default function LanguageSelection() {
             {selectedLanguages.length > 0 ? (
               <div className="flex flex-wrap gap-2 mb-2">
                 {selectedLanguages.map(lang => (
-                  <span key={lang} className="wiki-tag bg-wiki-blue text-white px-2 py-1 rounded text-sm">
+                  <span key={lang} className="wiki-tag bg-blue-600 dark:bg-blue-700 text-white px-2 py-1 rounded text-sm">
                     {getLanguageName(lang)}
                   </span>
                 ))}
