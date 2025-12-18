@@ -75,7 +75,7 @@ export function DonationBanner() {
 
             <div className="flex-1 text-center">
               <div className="flex items-center justify-center gap-2 mb-3">
-                <span className="text-yellow-600 dark:text-yellow-500 text-xl">i</span>
+                <span className="text-orange-600 dark:text-orange-500 text-xl">i</span>
                 <h3 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white">
                   {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}, {new Date().toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }).toLowerCase()}: "{message.title}" - {message.subtitle}
                 </h3>
@@ -92,7 +92,7 @@ export function DonationBanner() {
                     onClick={() => setCurrentMessage(index)}
                     className={`w-3 h-3 rounded-full transition-colors ${
                       index === currentMessage 
-                        ? 'bg-yellow-600' 
+                        ? 'bg-orange-600' 
                         : 'bg-gray-400 dark:bg-gray-500 hover:bg-gray-500 dark:hover:bg-gray-400'
                     }`}
                     aria-label={`Go to message ${index + 1}`}
