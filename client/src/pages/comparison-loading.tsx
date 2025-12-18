@@ -29,7 +29,7 @@ export default function ComparisonLoading() {
   const steps = [
     { icon: Globe, text: "Fetching articles from Wikipedia", duration: 15 },
     { icon: BookOpen, text: "Processing article content", duration: 25 },
-    { icon: Sparkles, text: `Analyzing with ${isPremium ? 'advanced' : 'AI'} comparison`, duration: 45 },
+    { icon: Sparkles, text: `${isPremium ? 'Deep analysis in progress' : 'Analyzing differences'}`, duration: 45 },
     { icon: Zap, text: "Generating insights and findings", duration: 15 }
   ];
 
@@ -121,7 +121,7 @@ export default function ComparisonLoading() {
               Comparing "{articleTitle}"
             </h1>
             <p className="text-base sm:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-gray-600 dark:text-gray-300 max-w-4xl 2xl:max-w-5xl mx-auto">
-              Analyzing across {selectedLanguages.length} languages with AI-powered insights
+              Analyzing across {selectedLanguages.length} languages
             </p>
           </div>
 
@@ -160,12 +160,12 @@ export default function ComparisonLoading() {
                       1-2 minutes
                     </p>
                     <p className="text-sm sm:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-blue-600 dark:text-blue-400">
-                      {isPremium ? 'Using advanced AI model for detailed analysis' : 'Processing with AI for comprehensive insights'}
+                      {isPremium ? 'Running deep analysis for detailed insights' : 'Processing for comprehensive insights'}
                     </p>
                     {comparisonMutation.isPending && (
                       <div className="mt-4 p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
                         <p className="text-sm text-blue-800 dark:text-blue-200 font-medium">
-                          🔄 AI analysis in progress... This may take up to 2 minutes for complex comparisons.
+                          Analysis in progress... This may take up to 2 minutes for complex comparisons.
                         </p>
                         <p className="text-xs text-blue-600 dark:text-blue-300 mt-1">
                           Elapsed time: {Math.floor(elapsedTime / 60)}:{(elapsedTime % 60).toString().padStart(2, '0')}

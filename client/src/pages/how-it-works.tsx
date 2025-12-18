@@ -48,9 +48,9 @@ export default function HowItWorksPage() {
                 <div className="bg-orange-100 dark:bg-orange-900/30 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <i className="fas fa-brain text-2xl text-orange-600 dark:text-orange-400"></i>
                 </div>
-                <h3 className="font-semibold mb-2 text-gray-900 dark:text-white">4. AI Analysis</h3>
+                <h3 className="font-semibold mb-2 text-gray-900 dark:text-white">4. Deep Analysis</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Advanced language models compare content and identify cultural perspectives and differences.
+                  Advanced comparison engine identifies cultural perspectives and differences.
                 </p>
               </div>
             </div>
@@ -95,7 +95,7 @@ export default function HowItWorksPage() {
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-chevron-right text-xs text-blue-600 dark:text-blue-400 mt-1"></i>
-                      <span><strong>OpenRouter.ai:</strong> Meta Llama 3.1 AI models</span>
+                      <span><strong>Analysis Engine:</strong> Advanced text comparison</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <i className="fas fa-chevron-right text-xs text-blue-600 dark:text-blue-400 mt-1"></i>
@@ -111,9 +111,9 @@ export default function HowItWorksPage() {
             </div>
           </section>
 
-          {/* AI Analysis Methodology */}
+          {/* Analysis Methodology */}
           <section>
-            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">AI Analysis Methodology</h2>
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Analysis Methodology</h2>
             <div className="space-y-6">
               <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-6">
                 <h3 className="font-semibold text-blue-900 dark:text-blue-300 mb-3">
@@ -210,7 +210,7 @@ export default function HowItWorksPage() {
                 <i className="fas fa-compress-alt mr-2"></i>Large Article Handling
               </h3>
               <p className="text-sm text-yellow-800 dark:text-yellow-400 mb-3">
-                When Wikipedia articles exceed AI processing limits, we use intelligent truncation:
+                When Wikipedia articles are very large, we use intelligent truncation:
               </p>
               <ul className="text-sm text-yellow-700 dark:text-yellow-400 space-y-1">
                 <li>• Preserve article introductions (overview and key facts)</li>

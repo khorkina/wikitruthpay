@@ -19,7 +19,7 @@ export default function AboutPage() {
             <div className="prose max-w-none">
               <p className="text-gray-700 leading-relaxed mb-4">
                 Wiki Truth reveals how the same topic can be presented differently across Wikipedia's various language versions. 
-                By comparing articles side-by-side with AI-powered analysis, we uncover cultural biases, narrative variations, 
+                By comparing articles side-by-side with advanced analysis, we uncover cultural biases, narrative variations, 
                 and factual differences that reflect diverse global perspectives.
               </p>
               <p className="text-gray-700 leading-relaxed">
@@ -35,10 +35,10 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-blue-50 border border-blue-200 rounded p-6">
                 <h3 className="font-semibold text-blue-900 mb-3">
-                  <i className="fas fa-brain mr-2"></i>AI-Powered Analysis
+                  <i className="fas fa-brain mr-2"></i>Deep Analysis
                 </h3>
                 <p className="text-sm text-blue-800">
-                  Advanced language models analyze content differences, cultural perspectives, and narrative variations 
+                  Advanced analysis identifies content differences, cultural perspectives, and narrative variations 
                   across Wikipedia articles in different languages.
                 </p>
               </div>
@@ -85,7 +85,7 @@ export default function AboutPage() {
                 <div className="text-center">
                   <div className="bg-wiki-blue text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-3">3</div>
                   <h3 className="font-semibold mb-2">Analyze</h3>
-                  <p className="text-sm text-gray-600">AI processes articles and identifies differences</p>
+                  <p className="text-sm text-gray-600">Articles are processed and differences are identified</p>
                 </div>
                 <div className="text-center">
                   <div className="bg-wiki-blue text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-3">4</div>
@@ -110,7 +110,7 @@ export default function AboutPage() {
                     <li>• React & TypeScript frontend</li>
                     <li>• Privacy-first architecture</li>
                     <li>• Direct Wikipedia API integration</li>
-                    <li>• Meta Llama AI models via OpenRouter</li>
+                    <li>• Advanced text analysis engine</li>
                     <li>• Local browser storage (IndexedDB)</li>
                   </ul>
                 </div>

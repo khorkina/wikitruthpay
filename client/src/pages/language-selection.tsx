@@ -274,7 +274,7 @@ export default function LanguageSelection() {
         <div className="bg-blue-50 border border-blue-200 rounded p-3 mb-4">
           <p className="text-blue-800 text-sm">
             <i className="fas fa-check-circle mr-2"></i>
-            <strong>Advanced AI Analysis:</strong> Full article processing with GPT-5
+            <strong>Deep Analysis:</strong> Full article processing with advanced comparison
           </p>
           <p className="text-blue-700 text-xs mt-1">
             <i className="fas fa-cog mr-1"></i>
